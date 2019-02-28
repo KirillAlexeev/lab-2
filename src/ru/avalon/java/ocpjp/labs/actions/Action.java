@@ -14,10 +14,8 @@ public interface Action extends Runnable, AutoCloseable {
      * потоке исполнения.
      */
     default void start() {
-        /*
-         * TODO №1 Реализуйте метод start интерфейса Action.
-         */
-        throw new UnsupportedOperationException("Not implemented yet!");
+        Thread thread = new Thread(this);
+        thread.start(); 
     }
     
 }
